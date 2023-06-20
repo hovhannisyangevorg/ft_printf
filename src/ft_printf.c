@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gehovhan <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: gehovhan <gehovhan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 20:43:00 by gehovhan          #+#    #+#             */
-/*   Updated: 2023/02/05 20:43:07 by gehovhan         ###   ########.fr       */
+/*   Updated: 2023/06/20 19:48:48 by gehovhan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,13 +43,13 @@ int	ft_formats(va_list args, const char format)
 int	ft_printf(const char *str, ...)
 {
 	int		i;
-	va_list	args;
 	int		print_length;
+	va_list	args;
 
 	i = 0;
 	print_length = 0;
 	va_start(args, str);
-	while (str[i])
+	while (str && str[i])
 	{
 		if (str[i] == '%')
 		{
